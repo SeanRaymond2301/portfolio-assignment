@@ -35,14 +35,22 @@ nav ul {
   justify-content: space-around; }
 
 nav ul li {
-  display: inline-block; }
+  display: inline-block;
+  margin-top: -25px;
+  padding: 33.5px 100px 33.5px 100px; }
+
+nav ul li:hover {
+  background: rgba(173, 0, 48, 0.75);
+  transition-duration: 1s; }
 
 i.fas {
   background-color: #ad0030;
-  padding: 5px;
+  padding: 10px;
   border-radius: 0 0 5px 5px;
-  margin-bottom: 5px;
-  transition-duration: 1.5s; }
+  margin-bottom: 4px;
+  transition-duration: 1.5s;
+  z-index: 1000000;
+  position: relative; }
 
 h1,
 h2,

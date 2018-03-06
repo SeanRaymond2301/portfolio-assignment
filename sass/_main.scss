@@ -13,7 +13,7 @@ $ind-33px: 33px;
 body {
     background: $bg-grey;
     font-family: $main-font;
-    margin: 0;
+    margin: 0 5px;
 }
 
 header {
@@ -23,8 +23,6 @@ header {
     padding: 30px;
     justify-content: space-between;
     align-content: center;
-    margin-left: 5px;
-    margin-right: 5px;
     
     img {
         display: inline-block;
@@ -45,7 +43,8 @@ nav.hidden {
     background: rgba(0,0,0,0.5);
     color: white;
     height: 75px;
-    width: 100%;
+    width: 100%; 
+    padding-left: 0;
 }
 
 nav ul {
@@ -56,15 +55,23 @@ nav ul {
 
 nav ul li {
     display: inline-block;
+    margin-top: -25px;
+    padding: 33.5px 100px 33.5px 100px;
+}
+
+nav ul li:hover {
+    background: rgba(173, 0, 48, .75);
+    transition-duration: 1s;
 }
 
 i.fas {
     background-color: $os-red; 
-    padding: 5px;
+    padding: 10px;
     border-radius: 0 0 5px 5px;
-    margin-left: 5px;
-    margin-bottom: 5px;
-    transition-duration: 1.5s; 
+    margin-bottom: 4px;
+    transition-duration: 1.5s;
+    z-index: 1000000;
+    position: relative;
 }
 
 h1,
