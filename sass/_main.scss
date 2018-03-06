@@ -1,0 +1,86 @@
+    //Importing the fonts and making them variables.
+@import url('https://fonts.googleapis.com/css?family=Archivo|Enriqueta');
+$title-font: 'Enriqueta', serif;
+$main-font: 'Archivo', sans-serif;
+    //Declaring the color variables.
+$bg-grey: #373737;
+$main-green: #27462b;
+$acc-green: #4bfa4b;
+$os-red: #ad0030;
+
+$ind-33px: 33px;
+
+body {
+    background: $bg-grey;
+    font-family: $main-font;
+    margin: 0;
+}
+
+header {
+    border-top: 5px solid $os-red;
+    border-bottom: 5px solid $os-red;
+    display: flex;
+    padding: 30px;
+    justify-content: space-between;
+    align-content: center;
+    margin-left: 5px;
+    margin-right: 5px;
+    
+    img {
+        display: inline-block;
+    }
+    
+    h1 {
+        display: inline-block;
+        flex: 1 1 auto;
+        text-align: center;
+    }
+    
+}
+
+nav.hidden {
+    position: absolute;
+    top: -75px;
+    transition-duration: 1.5s;
+    background: rgba(0,0,0,0.5);
+    color: white;
+    height: 75px;
+    width: 100%;
+}
+
+nav ul {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+i.fas {
+    background-color: $os-red; 
+    padding: 5px;
+    border-radius: 0 0 5px 5px;
+    margin-left: 5px;
+    margin-bottom: 5px;
+    transition-duration: 1.5s; 
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $title-font;
+    color: white;
+    font-weight: 600;
+    text-align: center;
+}
+
+p {
+    color: white;
+    font-weight: 500;
+    text-indent: $ind-33px;
+}
