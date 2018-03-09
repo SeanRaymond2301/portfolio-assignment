@@ -58,22 +58,23 @@ fs.readdir("sass/", function (err, items) {
 
 
 
-            for (var i = 0; i < items.length; i++) {
+    for (var i = 0; i < items.length; i++) {
 
-                let item = items[i].toString();
+        let item = items[i].toString();
 
-                if (item.substr(item.length - 5) == ".scss") {
+        if (item.substr(item.length - 5) == ".scss") {
 
-                    //Check to make sure that it's not a library file
+            //Check to make sure that it's not a library file
 
-                    if (item.substring(0, 1) != "_") {
+            if (item.substring(0, 1) != "_") {
 
-                        console.log("Compiling " + item);
+                console.log("Compiling " + item);
 
-                        compile(item.substring(0, item.length - 5));
+                compile(item.substring(0, item.length - 5));
 
-                    }
+            }
 
-                }
+        }
 
-            }});
+    }
+});

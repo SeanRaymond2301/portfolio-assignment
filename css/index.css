@@ -67,3 +67,13 @@ p {
   color: white;
   font-weight: 500;
   text-indent: 33px; }
+
+#card form.card div.card {
+  visibility: hidden;
+  padding: 200px;
+  transition-duration: 2s;
+  position: absolute;
+  left: -2000px;
+  width: 80vh; }
+
+/*# sourceMappingURL=index.css.map */
