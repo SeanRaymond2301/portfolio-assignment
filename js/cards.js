@@ -40,3 +40,5 @@ function checkCards(count) {
         setTimeout(nextCard, 3000, count);
     }
 }
+
+//Add blank element to "cards" array for proper cycling.
