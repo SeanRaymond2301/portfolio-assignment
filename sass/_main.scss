@@ -94,11 +94,20 @@ p {
 
 //*******************CARDS**********************//
 
- #card form.card div.card{
+#card form {
+    width: 100vw;
+    margin: auto;
+}
+
+body#card {
+    overflow: hidden;
+}
+
+#card form.card div.card {
     visibility: hidden;
     padding: 200px;
-    transition-duration: 2s;
+    transition-duration: 3s;
     position: absolute;
-    left: -2000px;
-    width: 80vh;
+    margin-left: -2000px;
+    width: 60vw;
 }

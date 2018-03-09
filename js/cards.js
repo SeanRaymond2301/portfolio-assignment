@@ -1,42 +1,43 @@
 function nextCard(counterRec)  {
-    var cards = document.getElementsByName("card"),
-        card = cards[counterRec - 1];
-    setTimeout(checkCards(counterRec), 3000);
-    if(counterRec == 6) {
-            card.removeAttribute("style");
-    }
+    var cards = document.getElementsByName("card");
+    checkCards(counterRec);
 }
 
+var timeThing;
+
 function checkCards(count) {
-    var cards = document.getElementsByName("card"),
-        card = cards[count - 1];
+    var cards = document.getElementsByName("card");
     if (count >= 2) {
-            cards[count - 2].removeAttribute("style");
+        cards[count - 2].removeAttribute("style");
     }
-    if (count <= 3) {
-        cards[5].style.overflow = "hidden";
-        cards[5].style.visibility = "hidden;"
-        cards[5].style.left = "2000px";
-    } 
-    if (count == 4){
-        cards[5].removeAttribute("style");
-    }
+
     if (count > cards.length - 1) { 
         count = 0;
+        cards[cards.length - 2].style.overflow = "hidden";
+        cards[cards.length - 2].style.marginLeft = "2000px";
+        cards[cards.length - 2].style.visibility = "hidden";
         nextCard(count);
         return;
     } else {
         if(count > 0) {
-            card.removeAttribute("style");
-            card.style.overflow = "hidden";
-            card.style.left = "2000px";
-            card.style.visibility = "hidden;"
+            cards[cards.length - 2].removeAttribute("style");
+            cards[count - 1].removeAttribute("style");
+            cards[count - 1].style.overflow = "hidden";
+            cards[count - 1].style.marginLeft = "2000px";
+            cards[count - 1].style.visibility = "hidden";
         }
+        
         console.log(count);
         cards[count].removeAttribute("style");
-        cards[count].style.left = "0";
+        cards[count].style.marginLeft = "0px";
         cards[count].style.visibility = "visible";
         count++;
-        setTimeout(nextCard, 3000, count);
+        if(count < 7){
+            timeThing = setTimeout(nextCard, 10000, count);
+            console.log("here");
+        } else {
+            clearTimeout(timeThing);
+            nextCard(count);
+        }
     }
 }
