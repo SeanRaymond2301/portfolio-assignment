@@ -75,9 +75,9 @@ function nextCard(current){
         tOut = setTimeout(nextCard, 3000, current);
     }
     if (!bool) {
+        cardLeft(current);
         bool = false;
     } else {
-        cardLeft(current);
         bool = true;
     }
 }
