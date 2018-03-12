@@ -103,11 +103,32 @@ body#card {
     overflow: hidden;
 }
 
-#card form.card div.card {
+#card div.card {
+    transition-duration: 3s;
     visibility: hidden;
     padding: 200px;
-    transition-duration: 3s;
     position: absolute;
     margin-left: -2000px;
+    width: 60vw;
+    color: white;
+}
+
+.cardShown {
+    visibility: visible;
+    transition-duration: 3s;
+    padding: 200px;
+    position: absolute;
+    margin: auto 0;
+    width: 60vw;
+    color: white;
+}
+
+.cardHidden {
+    color: white;
+    visibility: hidden;
+    transition-duration: 3s;
+    padding: 200px;
+    position: absolute;
+    margin-left: 2000px;
     width: 60vw;
 }

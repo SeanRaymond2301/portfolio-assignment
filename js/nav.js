@@ -17,8 +17,5 @@ function navBar() {
         header.style.transitionDuration = "1.5s";
         header.style.marginTop = "0";
         boolVar = false;
-        timeThingy = setTimeout(navBar, 3000);
     }
 }
-
-var timeThingy;

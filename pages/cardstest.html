@@ -4,17 +4,36 @@
         <meta charset="UTF-8">
         <title>Testing Cards</title>
         <link rel="stylesheet" href="../css/index.css">
-    </head>
+        <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
+    </head>        
+        <a onclick="navBar()">
+            <i class="fas fa-bars" id="icon"></i>
+        </a>
+        <nav class="hidden" id="nav">
+            <ul>
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+            </ul>   
+        </nav>
+        <header id="header">
+            <img src="http://via.placeholder.com/100x100" alt="Logo image" id="offright">
+            <h1>Sean Raymond: About Me</h1>
+            <img src="http://via.placeholder.com/100x100" alt="Nav">
+        </header>
     <body id="card" onload="nextCard(0)">
         <form class="card">
-            <div name="card" class="card">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde perferendis eaque vero voluptatibus laudantium dolor quibusdam, sed similique facilis possimus ab pariatur nobis consequuntur at. Perspiciatis iste corrupti optio, quibusdam.</div>
-            <div name="card" class="card">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est similique, itaque ad cum hic aliquid. Expedita illo, quibusdam id adipisci possimus quasi a, reprehenderit suscipit non dolores aspernatur sapiente laboriosam.</div>
-            <div name="card" class="card">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores fugiat maxime ratione. Quasi temporibus doloremque officia suscipit ipsam, illo sapiente impedit voluptate, culpa perspiciatis accusamus beatae. Magni tenetur odit et.</div>
-            <div name="card" class="card">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure modi nesciunt quae aut pariatur esse, obcaecati, dolore animi nemo velit! Obcaecati consectetur molestiae animi veniam magnam illo, labore dolorem non.</div>
-            <div name="card" class="card">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure doloremque molestias vel dignissimos officia ut perferendis optio voluptas maiores aspernatur rerum illo eum ipsa, quisquam aliquam corporis cumque. Culpa, neque.</div>
-            <div name="card" class="card">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, dolorem, odit. Recusandae quaerat, dignissimos et blanditiis fugiat vitae consectetur eum ducimus corporis voluptas quam eveniet delectus, ipsam sequi inventore. Quia.</div> 
+            <div name="card" class="card">0</div>
+            <div name="card" class="card">1</div>
+            <div name="card" class="card">2</div>
+            <div name="card" class="card">3</div>
+            <div name="card" class="card">4</div>
+            <div name="card" class="card">5</div> 
+            <a href="" onclick="cardLeft()"><i class="fas fa-angle-double-left"></i></a>
         </form>   
         <script src="../js/cards.js"></script>
+        <script src="../js/nav.js"></script>
     <div name="card" class="card"></div>
     </body>
 </html>
