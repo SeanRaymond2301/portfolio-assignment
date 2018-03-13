@@ -6,6 +6,7 @@
         <link rel="stylesheet" href="../css/index.css">
         <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
     </head>        
+    <body id="card" onload="nextCard(0)">
         <a onclick="navBar()">
             <i class="fas fa-bars" id="icon"></i>
         </a>
@@ -13,25 +14,29 @@
             <ul>
                 <li>1</li>
                 <li>2</li>
-                <li>3</li>
+                <li class="dd">3
+                    <ul class="displayNone">
+                        <li>1</li>
+                        <li>2</li>
+                        <li>3</li>
+                    </ul>
+                </li>
                 <li>4</li>
             </ul>   
         </nav>
         <header id="header">
             <img src="http://via.placeholder.com/100x100" alt="Logo image" id="offright">
             <h1>Sean Raymond: About Me</h1>
-            <img src="http://via.placeholder.com/100x100" alt="Nav">
+            <img src="http://via.placeholder.com/100x100" alt="Nav" id="offleft">
         </header>
-    <body id="card" onload="nextCard(0)">
-        <form class="card">
+        <div class="card">
             <div name="card" class="card">0</div>
             <div name="card" class="card">1</div>
             <div name="card" class="card">2</div>
             <div name="card" class="card">3</div>
             <div name="card" class="card">4</div>
             <div name="card" class="card">5</div> 
-            <a href="" onclick="cardLeft()"><i class="fas fa-angle-double-left"></i></a>
-        </form>   
+        </div>   
         <script src="../js/cards.js"></script>
         <script src="../js/nav.js"></script>
     <div name="card" class="card"></div>

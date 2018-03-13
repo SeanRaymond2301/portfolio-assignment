@@ -18,6 +18,10 @@ header {
     display: inline-block;
     flex: 1 1 auto;
     text-align: center; }
+  header img#offright {
+    margin-left: 25px; }
+  header img#offleft {
+    margin-right: 25px; }
 
 nav.hidden {
   position: absolute;
@@ -28,6 +32,43 @@ nav.hidden {
   height: 75px;
   width: 100%;
   padding-left: 0; }
+
+.displayNone {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  height: 0;
+  width: 208.91px;
+  display: none;
+  text-align: center;
+  padding-left: 0;
+  margin: 33.5px 0 0 -100px; }
+
+.displayNone li {
+  transition-duration: 1s;
+  position: relative;
+  width: 100%;
+  margin-top: 13px;
+  height: 49px;
+  padding-top: 35px;
+  padding-left: 0;
+  padding-bottom: 0;
+  padding-right: 0;
+  z-index: 1000; }
+
+li.dd:hover .displayNone {
+  color: white;
+  height: 296px;
+  display: block; }
+
+.dd {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
 
 nav ul {
   width: 100%;
@@ -41,7 +82,7 @@ nav ul li {
 
 nav ul li:hover {
   background: rgba(173, 0, 48, 0.75);
-  transition-duration: 1s; }
+  transition-duration: .5s; }
 
 i.fas {
   background-color: #ad0030;
@@ -73,16 +114,17 @@ p {
   margin: auto; }
 
 body#card {
-  overflow: hidden; }
+  overflow-x: hidden; }
 
-#card div.card {
+#card div div.card {
   transition-duration: 3s;
   visibility: hidden;
   padding: 200px;
   position: absolute;
   margin-left: -2000px;
   width: 60vw;
-  color: white; }
+  color: white;
+  z-index: 1; }
 
 .cardShown {
   visibility: visible;
@@ -91,7 +133,8 @@ body#card {
   position: absolute;
   margin: auto 0;
   width: 60vw;
-  color: white; }
+  color: white;
+  z-index: 1; }
 
 .cardHidden {
   color: white;
@@ -100,4 +143,5 @@ body#card {
   padding: 200px;
   position: absolute;
   margin-left: 2000px;
-  width: 60vw; }
+  width: 60vw;
+  z-index: 1; }
