@@ -10,6 +10,8 @@ $os-red: #ad0030;
 
 $ind-33px: 33px;
 
+//*******************GENERAL**********************//
+
 body {
     background: $bg-grey;
     font-family: $main-font;
@@ -144,24 +146,22 @@ p {
     text-indent: $ind-33px;
 }
 
-//*******************CARDS**********************//
+//*******************INTRODUCTION**********************//
 
-#card form {
-    width: 100vw;
-    margin: auto;
-}
-
-body#card {
+body#intro {
     overflow-x: hidden;
 }
 
-#card div div.card {
+#intro div.card {
+    overflow-x: hidden;
+}
+
+#intro div div.card {
     transition-duration: 3s;
     visibility: hidden;
     padding: 200px;
     position: absolute;
-    margin-left: -2000px;
-    width: 60vw;
+    margin-left: -2560px;
     color: white;
     z-index: 1;
 }
@@ -169,10 +169,9 @@ body#card {
 .cardShown {
     visibility: visible;
     transition-duration: 3s;
-    padding: 200px;
+    padding: 200px 0;
     position: absolute;
     margin: auto 0;
-    width: 60vw;
     color: white;
     z-index: 1;
 }
@@ -183,7 +182,38 @@ body#card {
     transition-duration: 3s;
     padding: 200px;
     position: absolute;
-    margin-left: 2000px;
-    width: 60vw;
+    margin-left: 2560px;
     z-index: 1;
+    min-width: 70%;
+}
+
+.flexP {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+}
+
+.col1 {
+    display: flex;
+    flex-direction: column;
+    width: 42.5%;
+    margin: 5px 2.5% 5px 5%;
+}
+
+.col2 {
+    display: flex;
+    flex-direction: column;
+    width: 42.5%;
+    margin: 5px 5% 5px 2.5%;
+}
+
+.w70 {
+    width: 70%;
+    margin: auto;
+}
+
+.w50 {
+    width: 50%;
+    margin: auto;
 }
