@@ -1,43 +1,33 @@
-function nextCard(counterRec)  {
-    var cards = document.getElementsByName("card"),
-        card = cards[counterRec - 1];
-    setTimeout(checkCards(counterRec), 3000);
-    if(counterRec == 6) {
-            card.removeAttribute("style");
-    }
-}
+//Declaring the variables globally because ehh
+    //Also yes, this is being rewritten cause the first edition is crap and a hack.
+var cards = document.getElementsByName("card"),
+    bool = false,
+    tOut;
+const cardLength = cards.length - 1;
 
-function checkCards(count) {
-    var cards = document.getElementsByName("card"),
-        card = cards[count - 1];
-    if (count >= 2) {
-            cards[count - 2].removeAttribute("style");
+function nextCard(current){
+    if(current > cardLength) {
+        clearTimeout(tOut);
     }
-    if (count <= 3) {
-        cards[5].style.overflow = "hidden";
-        cards[5].style.visibility = "hidden;"
-        cards[5].style.left = "2000px";
+    
+    if(current >= 1) {
+        cards[current - 1].setAttribute("class", "cardHidden");
     } 
-    if (count == 4){
-        cards[5].removeAttribute("style");
+
+    if(current >= 2) {
+        cards[current - 2].setAttribute("class", "card");
+        cards[5].setAttribute("class", "card");
     }
-    if (count > cards.length - 1) { 
-        count = 0;
-        nextCard(count);
-        return;
+
+    if(current > cardLength){
+        current = 0;
+        cards[5].setAttribute("class", "cardHidden");
+        clearTimeout(tOut);
+        nextCard(current);
     } else {
-        if(count > 0) {
-            card.removeAttribute("style");
-            card.style.overflow = "hidden";
-            card.style.left = "2000px";
-            card.style.visibility = "hidden;"
-        }
-        console.log(count);
-        cards[count].removeAttribute("style");
-        cards[count].style.left = "0";
-        cards[count].style.visibility = "visible";
-        count++;
-        setTimeout(nextCard, 3000, count);
+        cards[current].setAttribute("class", "cardShown");
+        current++;
+        tOut = setTimeout(nextCard, 3000, current);
     }
 }
 
