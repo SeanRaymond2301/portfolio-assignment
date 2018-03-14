@@ -34,18 +34,15 @@ nav.hidden {
   padding-left: 0; }
 
 .displayNone {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   background-color: rgba(0, 0, 0, 0.5);
   position: absolute;
   height: 0;
   width: 208.91px;
-  display: none;
   text-align: center;
   padding-left: 0;
-  margin: 33.5px 0 0 -100px; }
+  margin: 33.5px 0 0 -100px;
+  visibility: hidden;
+  overflow-y: hidden; }
 
 .displayNone li {
   transition-duration: 1s;
@@ -62,13 +59,9 @@ nav.hidden {
 li.dd:hover .displayNone {
   color: white;
   height: 296px;
-  display: block; }
-
-.dd {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center; }
+  display: block;
+  transition-duration: .75s;
+  visibility: visible; }
 
 nav ul {
   width: 100%;
@@ -112,41 +105,52 @@ p {
 body#intro {
   overflow-x: hidden; }
 
-#intro div.card {
+#intro div.card2 {
   overflow-x: hidden; }
 
 #intro div div.card {
-  transition-duration: 3s;
+  transition-duration: 2s;
   visibility: hidden;
-  padding: 200px;
+  padding: 100px 20px;
   position: absolute;
-  margin-left: -2560px;
-  color: white;
-  z-index: 1; }
+  left: -2560px;
+  color: black;
+  width: 50%;
+  border: 3px solid white; }
 
 .cardShown {
   visibility: visible;
-  transition-duration: 3s;
-  padding: 200px 0;
+  transition-duration: 2s;
+  padding: 100px 20px;
   position: absolute;
-  margin: auto 0;
-  color: white;
-  z-index: 1; }
+  left: 50%;
+  color: black;
+  width: 50%;
+  margin-left: -25%;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: 3px solid white; }
 
 .cardHidden {
-  color: white;
+  color: black;
   visibility: hidden;
-  transition-duration: 3s;
-  padding: 200px;
+  transition-duration: 2s;
+  padding: 100px 20px;
+  left: 2560px;
+  width: 50%;
   position: absolute;
-  margin-left: 2560px;
-  z-index: 1;
-  min-width: 70%; }
+  border: 3px solid white; }
 
 .flexP {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  justify-content: space-between; }
+
+.flexPC {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  flex-direction: row-reverse; }
 
 .col1 {
   display: flex;
@@ -168,4 +172,13 @@ body#intro {
   width: 50%;
   margin: auto; }
 
-/*# sourceMappingURL=index.css.map */
+p.black {
+  color: black; }
+
+div.width {
+  width: 20%; }
+
+.cardText {
+  display: block;
+  width: 100%;
+  margin: 0; }

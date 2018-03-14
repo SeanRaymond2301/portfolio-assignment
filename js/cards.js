@@ -11,7 +11,7 @@ function nextCard(current){
     }
     
     if(current >= 1) {
-        cards[current - 1].setAttribute("class", "cardHidden");
+        cards[current - 1].setAttribute("class", "cardHidden flexPC");
     } 
 
     if(current >= 2) {
@@ -21,14 +21,12 @@ function nextCard(current){
 
     if(current > cardLength){
         current = 0;
-        cards[5].setAttribute("class", "cardHidden");
+        cards[5].setAttribute("class", "cardHidden flexPC");
         clearTimeout(tOut);
         nextCard(current);
     } else {
-        cards[current].setAttribute("class", "cardShown");
+        cards[current].setAttribute("class", "cardShown flexPC");
         current++;
-        tOut = setTimeout(nextCard, 3000, current);
+        tOut = setTimeout(nextCard, 10000, current);
     }
 }
-
-//Add blank element to "cards" array for proper cycling.
