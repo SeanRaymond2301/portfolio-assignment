@@ -4,7 +4,7 @@ function navBar() {
     iconM = document.getElementById("icon");
     bar = document.getElementById("nav");
     header = document.getElementById("header");
-    
+
     if(!boolVar) {
         iconM.style.marginTop = "75px";
         bar.style.top = "0";
@@ -19,9 +19,3 @@ function navBar() {
         boolVar = false;
     }
 }
-
-//function showHiddenElements() {
-//    dropD = document.getElementsByClassName("displayNone");
-//    dropD.style.width = "100%";
-////    dropD.style
-//}

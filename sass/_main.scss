@@ -3,17 +3,15 @@
 $title-font: 'Enriqueta', serif;
 $main-font: 'Archivo', sans-serif;
     //Declaring the color variables.
+$main-green: #4aaa40;
 $bg-grey: #373737;
-$main-green: #27462b;
-$acc-green: #4bfa4b;
 $os-red: #ad0030;
-
 $ind-33px: 33px;
 
 //*******************GENERAL**********************//
 
 body {
-    background: $bg-grey;
+    background: #ededed;
     font-family: $main-font;
     margin: 0;
 }
@@ -28,17 +26,17 @@ p {
 }
 
 header {
-    border-top: 5px solid $acc-green;
-    border-bottom: 5px solid $acc-green;
+    border-top: 5px solid $main-green;
+    border-bottom: 5px solid $main-green;
     display: flex;
     padding: 30px;
     justify-content: space-between;
     align-content: center;
-    
+
     img {
         display: inline-block;
     }
-    
+
     h1 {
         display: inline-block;
         flex: 1 1 auto;
@@ -48,7 +46,7 @@ header {
     img#offright {
         margin-left: 25px;
     }
-    
+
     img#offleft {
         margin-right: 25px;
     }
@@ -56,11 +54,11 @@ header {
 }
 
 a {
-    color: white;
+    color: $bg-grey;
 }
 
 a:hover {
-    color: $acc-green;
+    color: $main-green;
     transition-duration: .5s;
 }
 
@@ -68,15 +66,16 @@ nav.hidden {
     position: absolute;
     top: -75px;
     transition-duration: 1.5s;
-    background: rgba(0,0,0,0.5);
+    background: rgba(0,0,0,.66);
     color: white;
     height: 75px;
     width: 100%;
     padding: 0;
+    margin: 0;
 }
 
 .displayNone {
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(0,0,0,.66);
     position: absolute;
     height: 0;
     width: 208.91px;
@@ -88,7 +87,7 @@ nav.hidden {
 }
 
 .displayNone li {
-    transition-duration: 1s;  
+    transition-duration: 1s;
     position: relative;
     margin-top: 13px;
     height: 49px;
@@ -102,7 +101,7 @@ nav.hidden {
 li.dd:hover .displayNone {
     color: white;
     height: 296px;
-    display: block;    
+    display: block;
     transition-duration: .75s;
     visibility: visible;
 }
@@ -129,19 +128,19 @@ nav ul li:hover {
 }
 
 i.fas {
-    background-color: $os-red; 
+    background-color: $main-green;
     padding: 10px;
     border-radius: 0 0 5px 5px;
     margin-bottom: 4px;
     transition-duration: 1.5s;
     z-index: 1000000;
     position: relative;
-    color: $bg-grey;
+    color: white;
     margin-left: 5px;
 }
 
 i.fas:hover {
-    color: $bg-grey;   
+    color: white;
 }
 
 h1,
@@ -151,13 +150,13 @@ h4,
 h5,
 h6 {
     font-family: $title-font;
-    color: white;
+    color: $bg-grey;
     font-weight: 600;
     text-align: center;
 }
 
 p {
-    color: white;
+    color: $bg-grey;
     font-weight: 500;
     text-indent: $ind-33px;
 }
@@ -269,4 +268,47 @@ div.width {
     text-align: center;
     font-weight: 400;
     font-size: 20px;
+}
+
+//*******************RECOMMENDATION**********************//
+
+#rec {
+
+    overflow-x: hidden;
+
+    button {
+        z-index: 10;
+        display: block;
+        margin: auto;
+    }
+
+    footer {
+        margin-top: 1250px;
+    }
+
+    .pagewrapper {
+
+       #card1 {
+           margin-top: 20px;
+           position: absolute;
+           left: 50%;
+           transform: translateX(-50%);
+           max-width: 100%;
+           transition-duration: 1s;
+           margin-left: 0;
+       }
+
+       #card2 {
+           margin-top: 20px;
+           position: absolute;
+           max-width: 100%;
+           left: 50%;
+           transform: translateX(-50%);
+           transition-duration: 1s;
+           margin-left: 2560px;
+
+       }
+
+   }
+
 }
