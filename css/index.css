@@ -18,7 +18,8 @@ header {
   display: flex;
   padding: 30px;
   justify-content: space-between;
-  align-content: center; }
+  align-content: center;
+  margin-top: 40px; }
   header img {
     display: inline-block; }
   header h1 {
@@ -38,7 +39,7 @@ a:hover {
   transition-duration: .5s; }
 
 nav.hidden {
-  position: absolute;
+  position: fixed;
   top: -75px;
   transition-duration: 1.5s;
   background: rgba(0, 0, 0, 0.66);
@@ -50,7 +51,7 @@ nav.hidden {
 
 .displayNone {
   background-color: rgba(0, 0, 0, 0.66);
-  position: absolute;
+  position: fixed;
   height: 0;
   width: 208.91px;
   text-align: center;
@@ -104,7 +105,9 @@ i.fas {
   z-index: 1000000;
   position: relative;
   color: white;
-  margin-left: 5px; }
+  margin-left: 5px;
+  position: fixed;
+  top: 0; }
 
 i.fas:hover {
   color: white; }
@@ -214,9 +217,10 @@ div.width {
 
 #rec {
   overflow-x: hidden; }
-  #rec button {
+  #rec a {
     z-index: 10;
-    display: block;
+    display: flex;
+    align-items: center;
     margin: auto; }
   #rec footer {
     margin-top: 1250px; }

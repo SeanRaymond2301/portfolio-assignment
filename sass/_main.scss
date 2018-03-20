@@ -32,6 +32,7 @@ header {
     padding: 30px;
     justify-content: space-between;
     align-content: center;
+    margin-top: 40px;
 
     img {
         display: inline-block;
@@ -63,7 +64,7 @@ a:hover {
 }
 
 nav.hidden {
-    position: absolute;
+    position: fixed;
     top: -75px;
     transition-duration: 1.5s;
     background: rgba(0,0,0,.66);
@@ -76,7 +77,7 @@ nav.hidden {
 
 .displayNone {
     background-color: rgba(0,0,0,.66);
-    position: absolute;
+    position: fixed;
     height: 0;
     width: 208.91px;
     text-align: center;
@@ -137,6 +138,8 @@ i.fas {
     position: relative;
     color: white;
     margin-left: 5px;
+    position: fixed;
+    top: 0;
 }
 
 i.fas:hover {
@@ -276,9 +279,10 @@ div.width {
 
     overflow-x: hidden;
 
-    button {
+    a {
         z-index: 10;
-        display: block;
+        display: flex;
+        align-items: center;
         margin: auto;
     }
 
