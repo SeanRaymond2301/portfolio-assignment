@@ -33,7 +33,6 @@ header {
     padding: 30px;
     justify-content: space-between;
     align-content: center;
-    margin-top: 40px;
 
     img {
         display: inline-block;
@@ -138,8 +137,11 @@ i.fas {
     position: relative;
     color: white;
     margin-left: 5px;
-    position: fixed;
     top: 0;
+}
+
+#navIcon {
+    position: fixed;
 }
 
 i.fas:hover {
@@ -279,7 +281,7 @@ div.width {
 //*******************CONTACT-ME**********************//
 
 #contact main.pagewrapper {
-    
+
     h2 {
         border-left: 1px solid white;
         border-right: 1px solid white;
@@ -290,81 +292,96 @@ div.width {
     p {
         text-indent: 0;
     }
-    
+
     col1,
     col2 {
         width: 350px;
     }
-    
+
+    section {
+        position: absolute;
+        left: -2560px;
+        transform: translateX(-50%);
+        transition: 1s;
+        visibility: hidden;
+    }
+
     .discord i {
         margin-top: 20px;
-        color: #7289da;
     }
-    
+
     .twitch i {
         color: #6441a5;
-        margin-top: 10px;
     }
-    
+
     .linkedin i {
         color: #0077b5;
     }
-    
+
     i {
         font-size: 350px;
         color: $os-red;
     }
-    
+
     i.fas {
         background-color: rgba(0,0,0,0);
     }
-    
+
     i.fas:hover {
         color: $os-red;
     }
-    
+
     a {
         text-align: center;
         width: 350px;
     }
-    
+
     div.center {
         text-align: center;
     }
-    
+
     .grey {
         color: #ababab;
     }
-    
+
+    .cardVisible {
+        left: 50%;
+        visibility: visible;
+    }
+
+    .cardHiddenR {
+        left: 2560px;
+    }
+
 }
 
 //*******************RESUME**********************//
 
 #resume .pagewrapper {
-    
+
     ul {
         margin: auto;
         display: block;
     }
-    
+
 }
 
 //*******************ART**********************//
 
 #art .pagewrapper {
-    
+
     .w70 {
         margin: 0;
     }
-    
+
     .m30 {
         margin: 0 15px;
     }
-    
+
     div.row {
         width: 100vw;
     }
-    
+
     .flexP {
         width: 70%;
     }
@@ -373,7 +390,7 @@ div.width {
         margin: auto;
         display: block;
     }
-    
+
 }
 
 //*******************RECOMMENDATION**********************//

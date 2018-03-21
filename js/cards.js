@@ -25,7 +25,7 @@ function nextCard(current){
         nextCard(current);
     } else {
         cards[current].setAttribute("class", "cardShown flexPC");
-        current--;
+        current++;
         tOut = setTimeout(nextCard, 10000, current);
     }
 }
