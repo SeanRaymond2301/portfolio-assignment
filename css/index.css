@@ -1,7 +1,11 @@
 /*Import the SCSS file*/
 @import url("https://fonts.googleapis.com/css?family=Archivo|Enriqueta");
 body {
+<<<<<<< HEAD
   background: #494949;
+=======
+  background: #ededed;
+>>>>>>> 14eff7d1d1ff47d79c8d5bfc090305998c8ef3aa
   font-family: "Archivo", sans-serif;
   margin: 0; }
 
@@ -13,12 +17,13 @@ p {
   margin: 0 5px; }
 
 header {
-  border-top: 5px solid #4bfa4b;
-  border-bottom: 5px solid #4bfa4b;
+  border-top: 5px solid #4aaa40;
+  border-bottom: 5px solid #4aaa40;
   display: flex;
   padding: 30px;
   justify-content: space-between;
-  align-content: center; }
+  align-content: center;
+  margin-top: 40px; }
   header img {
     display: inline-block; }
   header h1 {
@@ -31,26 +36,31 @@ header {
     margin-right: 25px; }
 
 a {
-  color: white; }
+  color: #373737; }
 
 a:hover {
-  color: #4bfa4b;
+  color: #4aaa40;
   transition-duration: .5s; }
 
 nav.hidden {
-  position: absolute;
+  position: fixed;
   top: -75px;
   transition-duration: 1.5s;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.66);
   color: white;
   height: 75px;
   width: 100%;
+<<<<<<< HEAD
   display: flex;
   padding: 0; }
+=======
+  padding: 0;
+  margin: 0; }
+>>>>>>> 14eff7d1d1ff47d79c8d5bfc090305998c8ef3aa
 
 .displayNone {
-  background-color: rgba(0, 0, 0, 0.5);
-  position: absolute;
+  background-color: rgba(0, 0, 0, 0.66);
+  position: fixed;
   height: 0;
   width: 208.91px;
   text-align: center;
@@ -94,18 +104,28 @@ nav ul li:hover {
   transition-duration: .5s; }
 
 i.fas {
-  background-color: #ad0030;
+  background-color: #4aaa40;
   padding: 10px;
   border-radius: 0 0 5px 5px;
   margin-bottom: 4px;
   transition-duration: 1.5s;
   z-index: 1000000;
   position: relative;
+<<<<<<< HEAD
   color: #494949;
   margin-left: 5px; }
 
 i.fas:hover {
   color: #494949; }
+=======
+  color: white;
+  margin-left: 5px;
+  position: fixed;
+  top: 0; }
+
+i.fas:hover {
+  color: white; }
+>>>>>>> 14eff7d1d1ff47d79c8d5bfc090305998c8ef3aa
 
 h1,
 h2,
@@ -114,12 +134,12 @@ h4,
 h5,
 h6 {
   font-family: "Enriqueta", serif;
-  color: white;
+  color: #373737;
   font-weight: 600;
   text-align: center; }
 
 p {
-  color: white;
+  color: #373737;
   font-weight: 500;
   text-indent: 33px; }
 
@@ -213,6 +233,7 @@ div.width {
   font-weight: 400;
   font-size: 20px; }
 
+<<<<<<< HEAD
 #contact main.pagewrapper h2 {
   border-left: 1px solid white;
   border-right: 1px solid white;
@@ -263,3 +284,30 @@ div.width {
   display: block; }
 
 /*# sourceMappingURL=index.css.map */
+=======
+#rec {
+  overflow-x: hidden; }
+  #rec a {
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    margin: auto; }
+  #rec footer {
+    margin-top: 1250px; }
+  #rec .pagewrapper #card1 {
+    margin-top: 20px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 100%;
+    transition-duration: 1s;
+    margin-left: 0; }
+  #rec .pagewrapper #card2 {
+    margin-top: 20px;
+    position: absolute;
+    max-width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    transition-duration: 1s;
+    margin-left: 2560px; }
+>>>>>>> 14eff7d1d1ff47d79c8d5bfc090305998c8ef3aa
