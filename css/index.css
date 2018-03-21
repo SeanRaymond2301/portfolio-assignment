@@ -1,12 +1,12 @@
 /*Import the SCSS file*/
 @import url("https://fonts.googleapis.com/css?family=Archivo|Enriqueta");
 body {
-  background: #373737;
+  background: #494949;
   font-family: "Archivo", sans-serif;
   margin: 0; }
 
 p {
-  line-height: 25px;
+  line-height: 27px;
   font-size: 20px; }
 
 .pagewrapper {
@@ -45,6 +45,7 @@ nav.hidden {
   color: white;
   height: 75px;
   width: 100%;
+  display: flex;
   padding: 0; }
 
 .displayNone {
@@ -56,17 +57,16 @@ nav.hidden {
   padding-left: 0;
   margin: 33.5px 0 0 -100px;
   visibility: hidden;
-  overflow-y: hidden; }
+  overflow-y: hidden;
+  display: flex;
+  flex-direction: column; }
 
 .displayNone li {
   transition-duration: 1s;
   position: relative;
   margin-top: 13px;
   height: 49px;
-  padding-top: 35px;
-  padding-left: 0;
-  padding-bottom: 0;
-  padding-right: 0;
+  padding: 35px 0 0 0;
   z-index: 1000; }
 
 li.dd:hover .displayNone {
@@ -81,12 +81,11 @@ nav ul {
   padding: 0;
   display: flex;
   justify-content: space-around;
-  max-width: 1920px;
   width: 100%;
   margin: 0; }
 
 nav ul li {
-  display: inline-block;
+  list-style: none;
   margin-top: -9px;
   padding: 33.5px 100px 33.5px 100px; }
 
@@ -102,11 +101,11 @@ i.fas {
   transition-duration: 1.5s;
   z-index: 1000000;
   position: relative;
-  color: #373737;
+  color: #494949;
   margin-left: 5px; }
 
 i.fas:hover {
-  color: #373737; }
+  color: #494949; }
 
 h1,
 h2,
@@ -128,20 +127,25 @@ p {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: space-between; }
+
+.flexPC {
+  display: flex;
   justify-content: space-between;
-  flex-basis: inital; }
+  flex-wrap: nowrap;
+  flex-direction: row-reverse; }
 
 .col1 {
   display: flex;
   flex-direction: column;
-  width: 42.5%;
-  margin: 5px 2.5% 5px 5%; }
+  width: 37.5%;
+  margin: 5% 0 5% 5%; }
 
 .col2 {
   display: flex;
   flex-direction: column;
-  width: 42.5%;
-  margin: 5px 5% 5px 2.5%; }
+  width: 37.5%;
+  margin: 5% 5% 5% 0; }
 
 .w70 {
   width: 70%;
@@ -151,6 +155,10 @@ p {
   width: 50%;
   margin: auto; }
 
+.w30 {
+  width: 30%;
+  margin: auto; }
+
 body#intro {
   overflow-x: hidden; }
 
@@ -158,7 +166,7 @@ body#intro {
   overflow-x: hidden; }
 
 #intro div div.card {
-  transition-duration: 2s;
+  transition-duration: 3s;
   visibility: hidden;
   padding: 100px 20px;
   position: absolute;
@@ -169,7 +177,7 @@ body#intro {
 
 .cardShown {
   visibility: visible;
-  transition-duration: 2s;
+  transition-duration: 3s;
   padding: 100px 20px;
   position: absolute;
   left: 50%;
@@ -182,18 +190,12 @@ body#intro {
 .cardHidden {
   color: black;
   visibility: hidden;
-  transition-duration: 2s;
+  transition-duration: 3s;
   padding: 100px 20px;
   left: 2560px;
   width: 50%;
   position: absolute;
   border: 3px solid white; }
-
-.flexPC {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: nowrap;
-  flex-direction: row-reverse; }
 
 p.black {
   color: black; }
@@ -210,3 +212,54 @@ div.width {
   text-align: center;
   font-weight: 400;
   font-size: 20px; }
+
+#contact main.pagewrapper h2 {
+  border-left: 1px solid white;
+  border-right: 1px solid white;
+  width: 120px;
+  margin: 20px auto; }
+#contact main.pagewrapper p {
+  text-indent: 0; }
+#contact main.pagewrapper col1,
+#contact main.pagewrapper col2 {
+  width: 350px; }
+#contact main.pagewrapper .discord i {
+  margin-top: 20px;
+  color: #7289da; }
+#contact main.pagewrapper .twitch i {
+  color: #6441a5;
+  margin-top: 10px; }
+#contact main.pagewrapper .linkedin i {
+  color: #0077b5; }
+#contact main.pagewrapper i {
+  font-size: 350px;
+  color: #ad0030; }
+#contact main.pagewrapper i.fas {
+  background-color: rgba(0, 0, 0, 0); }
+#contact main.pagewrapper i.fas:hover {
+  color: #ad0030; }
+#contact main.pagewrapper a {
+  text-align: center;
+  width: 350px; }
+#contact main.pagewrapper div.center {
+  text-align: center; }
+#contact main.pagewrapper .grey {
+  color: #ababab; }
+
+#resume .pagewrapper ul {
+  margin: auto;
+  display: block; }
+
+#art .pagewrapper .w70 {
+  margin: 0; }
+#art .pagewrapper .m30 {
+  margin: 0 15px; }
+#art .pagewrapper div.row {
+  width: 100vw; }
+#art .pagewrapper .flexP {
+  width: 70%; }
+#art .pagewrapper .flexP {
+  margin: auto;
+  display: block; }
+
+/*# sourceMappingURL=index.css.map */

@@ -19,9 +19,3 @@ function navBar() {
         boolVar = false;
     }
 }
-
-//function showHiddenElements() {
-//    dropD = document.getElementsByClassName("displayNone");
-//    dropD.style.width = "100%";
-////    dropD.style
-//}
