@@ -233,7 +233,7 @@ body#intro {
 }
 
 .cardShown {
-    visibility: visible;
+    display: none;
     transition-duration: 3s;
     padding: 100px 20px;
     position: absolute;
@@ -247,7 +247,7 @@ body#intro {
 
 .cardHidden {
     color: black;
-    visibility: hidden;
+    display: none;
     transition-duration: 3s;
     padding: 100px 20px;
     left: 2560px;
@@ -280,80 +280,99 @@ div.width {
 
 //*******************CONTACT-ME**********************//
 
-#contact main.pagewrapper {
+#contact {
+    overflow-x: hidden;
+    main.pagewrapper {
+        background-color: #ededed;
+        z-index: 1;
+        h2 {
+            border-left: 3px solid white;
+            border-right: 3px solid white;
+            width: 120px;
+            margin: 20px auto;
+        }
 
-    h2 {
-        border-left: 1px solid white;
-        border-right: 1px solid white;
-        width: 120px;
-        margin: 20px auto;
-    }
+        p {
+            text-indent: 0;
+        }
 
-    p {
-        text-indent: 0;
-    }
+        col1,
+        col2 {
+            width: 350px;
+        }
 
-    col1,
-    col2 {
-        width: 350px;
-    }
+        section {
+            position: absolute;
+            left: -2560px;
+            transform: translateX(-50%);
+            z-index: 0;
+            visibility: hidden;
+        }
 
-    section {
-        position: absolute;
-        left: -2560px;
-        transform: translateX(-50%);
-        transition: 1s;
-        visibility: hidden;
-    }
+        .discord i {
+            margin-top: 20px;
+        }
 
-    .discord i {
-        margin-top: 20px;
-    }
+        .twitch i {
+            color: #6441a5;
+        }
 
-    .twitch i {
-        color: #6441a5;
-    }
+        .linkedin i {
+            color: #0077b5;
+        }
 
-    .linkedin i {
-        color: #0077b5;
-    }
+        i {
+            font-size: 350px;
+            color: $os-red;
+        }
 
-    i {
-        font-size: 350px;
-        color: $os-red;
-    }
+        i.fas {
+            background-color: rgba(0,0,0,0);
+        }
 
-    i.fas {
-        background-color: rgba(0,0,0,0);
-    }
+        i.fas:hover {
+            color: $os-red;
+        }
 
-    i.fas:hover {
-        color: $os-red;
-    }
+        a {
+            text-align: center;
+            width: 350px;
+        }
 
-    a {
-        text-align: center;
-        width: 350px;
-    }
+        div.center {
+            text-align: center;
+        }
 
-    div.center {
-        text-align: center;
-    }
+        .grey {
+            color: #ababab;
+        }
 
-    .grey {
-        color: #ababab;
-    }
+        .cardVisible {
+            left: 50%;
+            z-index: 100;
+            visibility: visible;
+        }
 
-    .cardVisible {
-        left: 50%;
-        visibility: visible;
-    }
+        .cardHiddenR {
+            left: 2560px;
+            z-index: 0;
+            visibility: hidden;
+        }
 
-    .cardHiddenR {
-        left: 2560px;
+        .transition {
+            transition-duration: 1s;
+        }
+
+        .arrows {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+        }
+
     }
 
 }
+
 
 //*******************RESUME**********************//
 

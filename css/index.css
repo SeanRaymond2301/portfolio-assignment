@@ -181,7 +181,7 @@ body#intro {
   border: 3px solid white; }
 
 .cardShown {
-  visibility: visible;
+  display: none;
   transition-duration: 3s;
   padding: 100px 20px;
   position: absolute;
@@ -194,7 +194,7 @@ body#intro {
 
 .cardHidden {
   color: black;
-  visibility: hidden;
+  display: none;
   transition-duration: 3s;
   padding: 100px 20px;
   left: 2560px;
@@ -218,61 +218,61 @@ div.width {
   font-weight: 400;
   font-size: 20px; }
 
-#contact main.pagewrapper h2 {
-  border-left: 1px solid white;
-  border-right: 1px solid white;
-  width: 120px;
-  margin: 20px auto; }
-
-#contact main.pagewrapper p {
-  text-indent: 0; }
-
-#contact main.pagewrapper col1,
-#contact main.pagewrapper col2 {
-  width: 350px; }
-
-#contact main.pagewrapper section {
-  position: absolute;
-  left: -2560px;
-  transform: translateX(-50%);
-  transition: 1s;
-  visibility: hidden; }
-
-#contact main.pagewrapper .discord i {
-  margin-top: 20px; }
-
-#contact main.pagewrapper .twitch i {
-  color: #6441a5; }
-
-#contact main.pagewrapper .linkedin i {
-  color: #0077b5; }
-
-#contact main.pagewrapper i {
-  font-size: 350px;
-  color: #ad0030; }
-
-#contact main.pagewrapper i.fas {
-  background-color: transparent; }
-
-#contact main.pagewrapper i.fas:hover {
-  color: #ad0030; }
-
-#contact main.pagewrapper a {
-  text-align: center;
-  width: 350px; }
-
-#contact main.pagewrapper div.center {
-  text-align: center; }
-
-#contact main.pagewrapper .grey {
-  color: #ababab; }
-
-#contact main.pagewrapper .cardVisible {
-  left: 50%;
-  visibility: visible; }
-
-#contact main.pagewrapper .cardHiddenR {
-  left: 2560px; }
+#contact {
+  overflow-x: hidden; }
+  #contact main.pagewrapper {
+    background-color: #ededed;
+    z-index: 1; }
+    #contact main.pagewrapper h2 {
+      border-left: 3px solid white;
+      border-right: 3px solid white;
+      width: 120px;
+      margin: 20px auto; }
+    #contact main.pagewrapper p {
+      text-indent: 0; }
+    #contact main.pagewrapper col1,
+    #contact main.pagewrapper col2 {
+      width: 350px; }
+    #contact main.pagewrapper section {
+      position: absolute;
+      left: -2560px;
+      transform: translateX(-50%);
+      z-index: 0;
+      visibility: hidden; }
+    #contact main.pagewrapper .discord i {
+      margin-top: 20px; }
+    #contact main.pagewrapper .twitch i {
+      color: #6441a5; }
+    #contact main.pagewrapper .linkedin i {
+      color: #0077b5; }
+    #contact main.pagewrapper i {
+      font-size: 350px;
+      color: #ad0030; }
+    #contact main.pagewrapper i.fas {
+      background-color: transparent; }
+    #contact main.pagewrapper i.fas:hover {
+      color: #ad0030; }
+    #contact main.pagewrapper a {
+      text-align: center;
+      width: 350px; }
+    #contact main.pagewrapper div.center {
+      text-align: center; }
+    #contact main.pagewrapper .grey {
+      color: #ababab; }
+    #contact main.pagewrapper .cardVisible {
+      left: 50%;
+      z-index: 100;
+      visibility: visible; }
+    #contact main.pagewrapper .cardHiddenR {
+      left: 2560px;
+      z-index: 0;
+      visibility: hidden; }
+    #contact main.pagewrapper .transition {
+      transition-duration: 1s; }
+    #contact main.pagewrapper .arrows {
+      display: flex;
+      justify-content: space-between;
+      width: 100%; }
 
 #resume .pagewrapper ul {
   margin: auto;
