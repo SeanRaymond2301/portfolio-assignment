@@ -235,23 +235,33 @@ div.width {
       width: 350px; }
     #contact main.pagewrapper section {
       position: absolute;
-      left: -2560px;
+      left: -3000px;
       transform: translateX(-50%);
-      z-index: 0;
-      visibility: hidden; }
+      z-index: 0; }
     #contact main.pagewrapper .discord i {
-      margin-top: 20px; }
+      margin-top: 20px;
+      color: #ad0030; }
     #contact main.pagewrapper .twitch i {
-      color: #6441a5; }
+      color: #ad0030; }
     #contact main.pagewrapper .linkedin i {
-      color: #0077b5; }
+      color: #ad0030; }
     #contact main.pagewrapper i {
       font-size: 350px;
       color: #ad0030; }
+    #contact main.pagewrapper i.fa-angle-double-left,
+    #contact main.pagewrapper i.fa-angle-double-right {
+      visibility: visible;
+      font-size: 25px;
+      padding: 10px;
+      border-radius: 5px;
+      background: #aaaaaa;
+      margin: 50% 0 0 0; }
     #contact main.pagewrapper i.fas {
-      background-color: transparent; }
+      color: #ad0030; }
     #contact main.pagewrapper i.fas:hover {
       color: #ad0030; }
+    #contact main.pagewrapper i.fa-envelope-square {
+      background: transparent; }
     #contact main.pagewrapper a {
       text-align: center;
       width: 350px; }
@@ -261,12 +271,10 @@ div.width {
       color: #ababab; }
     #contact main.pagewrapper .cardVisible {
       left: 50%;
-      z-index: 100;
-      visibility: visible; }
+      z-index: 100; }
     #contact main.pagewrapper .cardHiddenR {
-      left: 2560px;
-      z-index: 0;
-      visibility: hidden; }
+      left: 3000px;
+      z-index: 0; }
     #contact main.pagewrapper .transition {
       transition-duration: 1s; }
     #contact main.pagewrapper .arrows {
