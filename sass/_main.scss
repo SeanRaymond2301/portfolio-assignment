@@ -210,6 +210,17 @@ p {
     margin: auto;
 }
 
+.w60na {
+    width: 60%;
+}
+
+.w30na {
+    width: 30%;
+}
+
+#output {
+    color: $os-red;
+}
 
 //*******************INTRODUCTION**********************//
 
@@ -303,7 +314,7 @@ div.width {
 
         section {
             position: absolute;
-            left: -3000px;
+            left: -25%;
             transform: translateX(-50%);
             z-index: 0;
         }
@@ -362,23 +373,19 @@ div.width {
         }
 
         .cardVisible {
-            left: 50%;
+            left: 20%;
             z-index: 100;
         }
 
         .cardHiddenR {
-            left: 3000px;
+            left: 40%;
             z-index: 0;
-        }
-
-        .transition {
-            transition-duration: 1s;
         }
 
         .arrows {
             display: flex;
             justify-content: space-between;
-            width: 100%;
+
         }
 
     }

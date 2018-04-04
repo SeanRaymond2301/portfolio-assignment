@@ -164,6 +164,15 @@ p {
   width: 30%;
   margin: auto; }
 
+.w60na {
+  width: 60%; }
+
+.w30na {
+  width: 30%; }
+
+#output {
+  color: #ad0030; }
+
 body#intro {
   overflow-x: hidden; }
 
@@ -235,7 +244,7 @@ div.width {
       width: 350px; }
     #contact main.pagewrapper section {
       position: absolute;
-      left: -3000px;
+      left: -25%;
       transform: translateX(-50%);
       z-index: 0; }
     #contact main.pagewrapper .discord i {
@@ -270,17 +279,14 @@ div.width {
     #contact main.pagewrapper .grey {
       color: #ababab; }
     #contact main.pagewrapper .cardVisible {
-      left: 50%;
+      left: 20%;
       z-index: 100; }
     #contact main.pagewrapper .cardHiddenR {
-      left: 3000px;
+      left: 40%;
       z-index: 0; }
-    #contact main.pagewrapper .transition {
-      transition-duration: 1s; }
     #contact main.pagewrapper .arrows {
       display: flex;
-      justify-content: space-between;
-      width: 100%; }
+      justify-content: space-between; }
 
 #resume .pagewrapper ul {
   margin: auto;
