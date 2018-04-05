@@ -83,7 +83,7 @@ nav.hidden {
     width: 208.91px;
     text-align: center;
     padding-left: 0;
-    margin: 33.5px 0 0 -100px;
+    margin: 33.5px 0 0 -75px;
     visibility: hidden;
     overflow-y: hidden;
     display: flex;
@@ -107,6 +107,11 @@ li.dd:hover .displayNone {
     visibility: visible;
 }
 
+nav a {
+    text-align: center;
+    padding: 33.5px 50px;
+}
+
 nav ul {
     width: 100vw;
     padding: 0;
@@ -118,8 +123,17 @@ nav ul {
 
 nav ul li {
     list-style: none;
-    margin-top: -9px;
-    padding: 33.5px 100px 33.5px 100px;
+    margin-top: 8px;
+    height: 67px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    color: white;
 }
 
 nav ul li:hover {
@@ -385,32 +399,6 @@ div.width {
 
 }
 
-//*******************ART**********************//
-
-#art .pagewrapper {
-
-    .w70 {
-        margin: 0;
-    }
-
-    .m30 {
-        margin: 0 15px;
-    }
-
-    div.row {
-        width: 100vw;
-    }
-
-    .flexP {
-        width: 70%;
-    }
-
-    .flexP {
-        margin: auto;
-        display: block;
-    }
-
-}
 
 //*******************RECOMMENDATION**********************//
 
@@ -432,7 +420,7 @@ div.width {
     .pagewrapper {
 
        #card1 {
-           margin-top: 20px;
+           margin-top: 50px;
            position: absolute;
            left: 50%;
            transform: translateX(-50%);
@@ -442,7 +430,7 @@ div.width {
        }
 
        #card2 {
-           margin-top: 20px;
+           margin-top: 50px;
            position: absolute;
            max-width: 100%;
            left: 50%;
@@ -450,6 +438,21 @@ div.width {
            transition-duration: 1s;
            margin-left: 2560px;
 
+       }
+
+       #switch {
+           margin: 20px auto;
+           width: 10%;
+           text-align: center;
+           border: 4px solid $main-green;
+           color: $bg-grey;
+           display: block;
+           padding: 5px 0;
+       }
+
+       #switch:hover {
+           color: $bg-grey;
+           cursor: default;
        }
 
    }

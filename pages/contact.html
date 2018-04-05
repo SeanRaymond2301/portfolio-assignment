@@ -6,22 +6,23 @@
     <link rel="stylesheet" href="../css/index.css">
     <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
 </head>
-<body id="contact">
+<body id="contact" onload="initFirstCard();">
     <a onclick="navBar()" id="navIcon">
         <i class="fas fa-bars" id="icon"></i>
     </a>
     <nav class="hidden" id="nav">
         <ul>
-            <li>1</li>
-            <li>2</li>
-            <li class="dd">3
+            <li><a href="index.html">Home Page</a></li>
+            <li><a href="aboutme.html">About Me</a></li>
+            <li class="dd">Portfolio
                 <ul class="displayNone">
-                    <li>1</li>
-                    <li>2</li>
-                    <li>3</li>
+                    <li><a href="writing.html">Writing</a></li>
+                    <li><a href="web-projects.html">Web Projects</a></li>
+                    <li><a href="rec.html">Letters</a></li>
+                    <li><a href="resume.html">My Resume</a></li>
                 </ul>
             </li>
-            <li>4</li>
+            <li><a href="contact.html">Contact Me</a></li>
         </ul>
     </nav>
     <header id="header">
@@ -41,7 +42,7 @@
             <i class="fas fa-angle-double-right"></i>
         </a>
     </div>
-        <section class="col1 w50 cardVisible">
+        <section class="col1 w50 transition">
             <h2>LinkedIn</h2>
             <div class="center">
                 <a href="https://www.linkedin.com/in/sean-raymond-9b488215b/" class="linkedin">

@@ -16,19 +16,29 @@
     </a>
     <nav class="hidden" id="nav">
         <ul>
-            <li>1</li>
-            <li>2</li>
-            <li>3</li>
-            <li>4</li>
+            <li><a href="index.html">Home Page</a></li>
+            <li><a href="aboutme.html">About Me</a></li>
+            <li class="dd">Portfolio
+                <ul class="displayNone">
+                    <li><a href="writing.html">Writing</a></li>
+                    <li><a href="web-projects.html">Web Projects</a></li>
+                    <li><a href="rec.html">Letters</a></li>
+                    <li><a href="resume.html">My Resume</a></li>
+                </ul>
+            </li>
+            <li><a href="contact.html">Contact Me</a></li>
         </ul>
     </nav>
     <main class="pagewrapper">
         <div>
             <header id="header">
                 <img src="http://via.placeholder.com/100x100" alt="Logo image" id="offright">
-                <h1>Sean Raymond: About Me</h1>
+                <h1>Sean Raymond: Letters of Recommendation</h1>
                 <img src="http://via.placeholder.com/100x100" alt="Nav">
             </header>
+            <div class="flexP w70">
+                <p></p>
+            </div>
             <div class="flexP w70" id="card1">
                 <section class="flexP">
                     <h2>Letter One</h2>
@@ -107,7 +117,7 @@
                     </p>
                 </section>
             </div>
-            <a onclick="switchLetter()"><i class="fas fa-angle-double-right"></i></a>
+            <a onclick="switchLetter()" id="switch">Switch Letters</a>
             <footer>
                 &copy;Sean Raymond from CART
             </footer>
