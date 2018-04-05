@@ -67,7 +67,7 @@ nav.hidden {
     position: fixed;
     top: -75px;
     transition-duration: 1.5s;
-    background: rgba(0,0,0,.66);
+    background: rgba(0,0,0,.75);
     color: white;
     height: 75px;
     width: 100%;
@@ -77,13 +77,13 @@ nav.hidden {
 }
 
 .displayNone {
-    background-color: rgba(0,0,0,.66);
+    background-color: rgba(0,0,0,.75);
     position: fixed;
     height: 0;
-    width: 208.91px;
+    width: 158.7px;
     text-align: center;
     padding-left: 0;
-    margin: 33.5px 0 0 -75px;
+    margin: 33.5px 0 0 -50px;
     visibility: hidden;
     overflow-y: hidden;
     display: flex;
@@ -101,15 +101,20 @@ nav.hidden {
 
 li.dd:hover .displayNone {
     color: white;
-    height: 296px;
+    height: 400px;
     display: block;
     transition-duration: .75s;
     visibility: visible;
 }
 
 nav a {
+    color: white;
+    text-decoration: none;
     text-align: center;
-    padding: 33.5px 50px;
+}
+
+nav a:hover {
+    color: white;
 }
 
 nav ul {
@@ -123,13 +128,8 @@ nav ul {
 
 nav ul li {
     list-style: none;
-    margin-top: 8px;
-    height: 67px;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
+    margin-top: -9px;
+    padding: 33.5px 50px;
 }
 
 nav ul li a:hover {
@@ -198,15 +198,23 @@ p {
 .col1 {
     display: flex;
     flex-direction: column;
-    width: 37.5%;
-    margin: 5% 0 5% 5%;
+    width: 42.5%;
+    margin: 5% 0 0 5%;
+    padding: 10px;
 }
 
 .col2 {
     display: flex;
     flex-direction: column;
-    width: 37.5%;
-    margin: 5% 5% 5% 0;
+    width: 42.5%;
+    margin: 5% 5% 0 0;
+    padding: 10px;
+}
+
+.col1:hover,
+.col2:hover {
+    background-color: rgba(0,0,0,.25);
+    transition-duration: .5s;
 }
 
 .w70 {
@@ -228,7 +236,7 @@ p {
     width: 60%;
 }
 
-.w30na {
+.w40na {
     width: 30%;
 }
 
@@ -476,4 +484,12 @@ div.width {
 
    }
 
+}
+
+//*******************WRITING**********************//
+
+#writing {
+    p.border {
+        border-top: 5px solid $os-red;
+    }
 }

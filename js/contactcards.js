@@ -2,88 +2,64 @@ var card = document.getElementsByClassName('w50'),
     cardCL = card.classList,
     count = 0;
 
-function counter(n) {
-    count = count + n;
-}
-
 function initFirstCard() {
-    card[0].classList.add("cardVisible");
+    classAdd(0, "cardHiddenR");
+    classAdd(1, "cardVisible");
+    count++;
 }
 
 function nextCard() {
 
-    counter(1);
-    console.log(count);
-
-    if (count < card.length - 1) {
-
+    if (count < card.length) {
+        count++;
         for (let i = 0; i < card.length - 1; i++) {
-            card[i].classList.remove("cardHiddenR");
-            card[i].classList.remove("cardVisible");
-            card[i].classList.add("transition");
-        }
-
-        if (count >= 3) {
-            card[count - 2].classList.remove("transition");
+            classRem(i, "cardHiddenR");
+            classRem(i, "cardVisible");
         }
 
         if (count == 0) {
-            card[card.length - 2].classList.add("cardHiddenR");
-            card[0].classList.add("cardVisible");
+            classRem(card.length - 2, "cardVisible");
+            classAdd(card.length - 2, "cardHiddenR");
+            classAdd(0, "cardVisible");
         }
 
         if (count >= 0) {
-            card[count].classList.add("cardVisible");
+            classAdd(count, "cardVisible");
         }
 
         if (count >= 1) {
-            card[count - 1].classList.add("cardHiddenR");
+            classAdd(count - 1, "cardHiddenR");
         }
 
-    } else if (count >= card.length - 2) {
-        card[count].classList.add("cardHiddenR");
-        count = 0;
+        if (count == 5) {
+            classAdd(0, "cardVisible");
+            classAdd(count, "cardHiddenR")
+            count = 0;
+        }
     }
 
 }
 
 function prevCard() {
-    if (count > 0) {
-
-        counter(-1);
-        console.log(count);
-
-        if (count == card.length - 1) {
-            card[count].classList.add("cardVisible");
-            card[count].classList.add("transition");
-            card[0].classList.remove("cardVisible");
-            card[0].classList.add("transition");
-        } else if (count > 1) {
-
-            for (let j = 0; j < card.length - 1; j++) {
-                card[j].classList.add("cardHiddenR");
-                card[j].classList.remove("cardVisible");
-                card[j].classList.add("transition");
-            }
-
+    if (count >= 0) {
+        count--;
+        for (let j = 0; j < card.length - 1; j++) {
+            classRem(j, "cardHiddenR");
+            classRem(j, "cardVisible");
         }
-
-        card[0].classList.remove("cardHiddenR");
-
-        if (count == 0) {
-            card[0].classList.add("cardHiddenR");
-            count = card.length - 1;
-            card[count].classList.add("cardVisible");
-        }
-
-        if (count > 0) {
-            card[count - 1].classList.add("cardVisible");
-            card[count - 1].classList.remove("cardHiddenR");
-        }
-
-        if (count <= card.length - 2) {
-            card[count].classList.remove("cardVisible");
-            card[count].classList.remove("cardHiddenR");
-        }
+        classAdd(count + 1, "cardHiddenR");
+        classAdd(count, "cardVisible");
     }
+    if (count == 0) {
+        classAdd(0, "cardVisible");
+        count = card.length - 2;
+    }
+}
+
+function classAdd(position, className) {
+    card[position].classList.add(className);
+}
+
+function classRem(position, className) {
+    card[position].classList.remove(className);
 }
