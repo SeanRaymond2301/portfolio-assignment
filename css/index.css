@@ -7,7 +7,8 @@ body {
 
 p {
   line-height: 27px;
-  font-size: 20px; }
+  font-size: 20px;
+  font-weight: 300; }
 
 .pagewrapper {
   margin: 0 5px; }
@@ -18,7 +19,8 @@ header {
   display: flex;
   padding: 30px;
   justify-content: space-between;
-  align-content: center; }
+  align-content: center;
+  box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.5); }
   header img {
     display: inline-block; }
   header h1 {
@@ -26,16 +28,14 @@ header {
     flex: 1 1 auto;
     text-align: center; }
   header img#offright {
-    margin-left: 25px; }
+    margin-left: 25px;
+    max-width: 100px;
+    max-height: 100px; }
   header img#offleft {
     margin-right: 25px; }
 
 a {
   color: #494949; }
-
-a:hover {
-  color: #4aaa40;
-  transition-duration: .5s; }
 
 nav.hidden {
   position: fixed;
@@ -102,7 +102,7 @@ nav ul li a:hover {
   color: white; }
 
 nav ul li:hover {
-  background: rgba(173, 0, 48, 0.5);
+  background: rgba(173, 0, 48, 0.75);
   transition-duration: .5s; }
 
 i.fas {
@@ -281,14 +281,14 @@ div.width {
       font-size: 25px;
       padding: 10px;
       border-radius: 5px;
-      background: #aaaaaa;
+      background: rgba(255, 20, 20, 0.25);
       margin: 50% 0 0 0; }
     #contact main.pagewrapper i.fas {
       color: #ad0030; }
     #contact main.pagewrapper i.fas:hover {
       color: #ad0030; }
     #contact main.pagewrapper i.fa-envelope-square {
-      background: rgba(0, 0, 0, 0); }
+      background: transparent; }
     #contact main.pagewrapper a {
       text-align: center;
       width: 350px; }
@@ -349,5 +349,3 @@ div.width {
 
 #writing p.border {
   border-top: 5px solid #ad0030; }
-
-/*# sourceMappingURL=index.css.map */

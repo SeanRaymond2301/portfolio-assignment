@@ -13,6 +13,7 @@ function validator() {
                     return checkEmail();
                 }
                 if (exists == true) {
+                    obj.focus();
                     return true;
                 } else {
                     outPt("Invalid Email");

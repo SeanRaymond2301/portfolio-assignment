@@ -20,6 +20,7 @@ body {
 p {
     line-height: 27px;
     font-size: 20px;
+    font-weight: 300;
 }
 
 .pagewrapper {
@@ -33,6 +34,7 @@ header {
     padding: 30px;
     justify-content: space-between;
     align-content: center;
+    box-shadow: 0 0 5px 5px rgba(0,0,0,0.5);
 
     img {
         display: inline-block;
@@ -46,6 +48,8 @@ header {
 
     img#offright {
         margin-left: 25px;
+        max-width: 100px;
+        max-height: 100px;
     }
 
     img#offleft {
@@ -56,11 +60,6 @@ header {
 
 a {
     color: $bg-grey;
-}
-
-a:hover {
-    color: $main-green;
-    transition-duration: .5s;
 }
 
 nav.hidden {
@@ -137,7 +136,7 @@ nav ul li a:hover {
 }
 
 nav ul li:hover {
-    background: rgba(173, 0, 48, .5);
+    background: rgba(173, 0, 48, .75);
     transition-duration: .5s;
 }
 
@@ -365,7 +364,7 @@ div.width {
             font-size: 25px;
             padding: 10px;
             border-radius: 5px;
-            background: #aaaaaa;
+            background: rgba(255,20,20,.25);
             margin: 50% 0 0 0;
         }
 
