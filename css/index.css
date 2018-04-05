@@ -175,6 +175,15 @@ p {
   width: 30%;
   margin: auto; }
 
+.w60na {
+  width: 60%; }
+
+.w30na {
+  width: 30%; }
+
+#output {
+  color: #ad0030; }
+
 body#intro {
   overflow-x: hidden; }
 
@@ -246,23 +255,33 @@ div.width {
       width: 350px; }
     #contact main.pagewrapper section {
       position: absolute;
-      left: -2560px;
+      left: -25%;
       transform: translateX(-50%);
-      z-index: 0;
-      visibility: hidden; }
+      z-index: 0; }
     #contact main.pagewrapper .discord i {
-      margin-top: 20px; }
+      margin-top: 20px;
+      color: #ad0030; }
     #contact main.pagewrapper .twitch i {
-      color: #6441a5; }
+      color: #ad0030; }
     #contact main.pagewrapper .linkedin i {
-      color: #0077b5; }
+      color: #ad0030; }
     #contact main.pagewrapper i {
       font-size: 350px;
       color: #ad0030; }
+    #contact main.pagewrapper i.fa-angle-double-left,
+    #contact main.pagewrapper i.fa-angle-double-right {
+      visibility: visible;
+      font-size: 25px;
+      padding: 10px;
+      border-radius: 5px;
+      background: #aaaaaa;
+      margin: 50% 0 0 0; }
     #contact main.pagewrapper i.fas {
       background-color: rgba(0, 0, 0, 0); }
     #contact main.pagewrapper i.fas:hover {
       color: #ad0030; }
+    #contact main.pagewrapper i.fa-envelope-square {
+      background: transparent; }
     #contact main.pagewrapper a {
       text-align: center;
       width: 350px; }
@@ -271,19 +290,14 @@ div.width {
     #contact main.pagewrapper .grey {
       color: #ababab; }
     #contact main.pagewrapper .cardVisible {
-      left: 50%;
-      z-index: 100;
-      visibility: visible; }
+      left: 20%;
+      z-index: 100; }
     #contact main.pagewrapper .cardHiddenR {
-      left: 2560px;
-      z-index: 0;
-      visibility: hidden; }
-    #contact main.pagewrapper .transition {
-      transition-duration: 1s; }
+      left: 40%;
+      z-index: 0; }
     #contact main.pagewrapper .arrows {
       display: flex;
-      justify-content: space-between;
-      width: 100%; }
+      justify-content: space-between; }
 
 #resume .pagewrapper ul {
   margin: auto;
