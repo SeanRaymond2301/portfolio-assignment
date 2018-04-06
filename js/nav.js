@@ -14,5 +14,4 @@ function navBar() {
         bar.style.top = "-75px";
         boolVar = false;
     }
-
 }

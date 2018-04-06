@@ -1,4 +1,7 @@
+var exists;
+
 function validator() {
+    clearOutPt();
     for(i = 0; i < document.forms[0].length - 1; i++) {
         var objName = document.forms[0][i].name;
         var obj = document.forms[0][i].value;
@@ -6,34 +9,16 @@ function validator() {
             outPt("Incorrect submition in the " + "'" + objName + "'" + " field.");
             return false;
         }
-
-        if (objName == "Email") {
-            for (j = 0; j < obj.length - 1; i++) {
-                if(obj.charAt(j) == "@") {
-                    return checkEmail();
-                }
-                if (exists == true) {
-                    obj.focus();
-                    return true;
-                } else {
-                    outPt("Invalid Email");
-                    return false;
-                }
-            }
-        } else {
-            clearOutPt();
+        if (!(checkEmail())) {
+            outPt("Invalid Email");
+            return false;
         }
     }
 }
 
 function checkEmail() {
-    for (x = 0; x < obj.length - 1; i++);
-        if (obj.charAt(x) == ".") {
-            var exists = 1;
-            return true;
-        } else {
-            return false;
-        }
+    var email = document.getElementsByName("Email")[0].value;
+    return /\S+@\S+\.\w+/.test(email);
 }
 
 function outPt(value) {
