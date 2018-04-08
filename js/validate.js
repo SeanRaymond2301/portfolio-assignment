@@ -6,13 +6,13 @@ function validator() {
         var objName = document.forms[0][i].name;
         var obj = document.forms[0][i].value;
         if (obj == "") {
-            outPt("Incorrect submition in the " + "'" + objName + "'" + " field.");
+            outPt("Invalid submission in the " + "'" + objName + "'" + " field.");
             return false;
         }
-        if (!(checkEmail())) {
-            outPt("Invalid Email");
-            return false;
-        }
+    }
+    if (!(checkEmail())) {
+        outPt("Invalid Email");
+        return false;
     }
 }
 

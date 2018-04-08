@@ -4,14 +4,13 @@ var card = document.getElementsByClassName('w50'),
 
 function initFirstCard() {
     classAdd(0, "cardHiddenR");
-    classAdd(1, "cardVisible");
+    classAdd(card.length - 3, "cardVisible");
     count++;
 }
 
 function nextCard() {
-
     if (count < card.length) {
-        count++;
+        console.log(count)
         for (let i = 0; i < card.length - 1; i++) {
             classRem(i, "cardHiddenR");
             classRem(i, "cardVisible");
@@ -23,37 +22,47 @@ function nextCard() {
             classAdd(0, "cardVisible");
         }
 
-        if (count >= 0) {
-            classAdd(count, "cardVisible");
-        }
+            classAdd(count, "cardHiddenR");
 
         if (count >= 1) {
-            classAdd(count - 1, "cardHiddenR");
+            classAdd(count - 1, "cardVisible");
         }
 
-        if (count == 5) {
-            classAdd(0, "cardVisible");
-            classAdd(count, "cardHiddenR")
+        if (count >= card.length - 2) {
+            classAdd(0, "cardHiddenR");
+            classAdd(count, "cardVisible")
             count = 0;
         }
+        count++;
     }
-
 }
 
 function prevCard() {
+    count--;
     if (count >= 0) {
-        count--;
+        console.log(count);
         for (let j = 0; j < card.length - 1; j++) {
             classRem(j, "cardHiddenR");
             classRem(j, "cardVisible");
         }
-        classAdd(count + 1, "cardHiddenR");
-        classAdd(count, "cardVisible");
-    }
-    if (count == 0) {
-        classAdd(0, "cardVisible");
+            if (count == card.length - 3) {
+                classRem(1, "cardVisible");
+                classRem(1, "cardHiddenR");
+                classRem(0, "cardVisible");
+                classAdd(0, "cardHiddenR");
+                classAdd(count, "cardVisible");
+                classRem(count - 1, "cardVisible");
+                console.log("here");
+            }
+        classAdd(count, "cardHiddenR");
+        if (count > 1) {
+            classAdd(count - 1, "cardVisible");
+            }
+        }
+    if (count <= 0) {
         count = card.length - 2;
     }
+
 }
 
 function classAdd(position, className) {

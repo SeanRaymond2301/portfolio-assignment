@@ -52,8 +52,16 @@ header {
         max-height: 100px;
     }
 
-    img#offleft {
-        margin-right: 25px;
+    i#offleft {
+        color: #ededed;
+        margin-right: 15px;
+        border-radius: 5px;
+        background-color: $os-red;
+        font-size: 100px;
+    }
+
+    i#offleft:hover {
+        color: #ededed;
     }
 
 }
@@ -140,7 +148,7 @@ nav ul li:hover {
     transition-duration: .5s;
 }
 
-i.fas {
+i.fa-bars {
     background-color: $main-green;
     padding: 10px;
     border-radius: 0 0 5px 5px;
@@ -243,10 +251,28 @@ p {
     color: $os-red;
 }
 
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+footer {
+    bottom: 0;
+    left: 0;
+}
+
 //*******************INTRODUCTION**********************//
 
 body#intro {
     overflow-x: hidden;
+    img.introimg {
+        height: 700px;
+        padding: 20px;
+    }
+    .w50:hover {
+        background-color: rgba(0,0,0,.25);
+        transition-duration: .5s;
+    }
 }
 
 #intro div.card2 {
@@ -406,9 +432,13 @@ div.width {
         .arrows {
             display: flex;
             justify-content: space-between;
-
+            z-index: 100000;
         }
 
+    }
+
+    .tyn {
+        margin-top: 200px;
     }
 
 }
@@ -432,13 +462,6 @@ div.width {
 
     overflow-x: hidden;
 
-    a {
-        z-index: 10;
-        display: flex;
-        align-items: center;
-        margin: auto;
-    }
-
     footer {
         margin-top: 1250px;
     }
@@ -446,7 +469,7 @@ div.width {
     .pagewrapper {
 
        #card1 {
-           margin-top: 50px;
+           margin-top: 220px;
            position: absolute;
            left: 50%;
            transform: translateX(-50%);
@@ -456,7 +479,7 @@ div.width {
        }
 
        #card2 {
-           margin-top: 50px;
+           margin-top:220px;
            position: absolute;
            max-width: 100%;
            left: 50%;
@@ -467,7 +490,7 @@ div.width {
        }
 
        #switch {
-           margin: 20px auto;
+           margin: 120px auto;
            width: 10%;
            text-align: center;
            border: 4px solid $main-green;
@@ -490,5 +513,15 @@ div.width {
 #writing {
     p.border {
         border-top: 5px solid $os-red;
+    }
+}
+
+//*******************WEB-PROJECTS**********************//
+
+#web {
+    .flexPW {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
     }
 }
