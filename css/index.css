@@ -21,14 +21,11 @@ header {
   justify-content: space-between;
   align-content: center;
   box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.5); }
-  header img {
-    display: inline-block; }
   header h1 {
     display: inline-block;
     flex: 1 1 auto;
     text-align: center; }
   header img#offright {
-    margin-left: 25px;
     max-width: 100px;
     max-height: 100px; }
   header i#offleft {
@@ -200,7 +197,7 @@ p {
 
 img {
   max-width: 100%;
-  max-height: 100%; }
+  height: auto; }
 
 footer {
   bottom: 0;
@@ -208,9 +205,6 @@ footer {
 
 body#intro {
   overflow-x: hidden; }
-  body#intro img.introimg {
-    height: 700px;
-    padding: 20px; }
   body#intro .w50:hover {
     background-color: rgba(0, 0, 0, 0.25);
     transition-duration: .5s; }
@@ -267,7 +261,7 @@ div.width {
   font-size: 20px; }
 
 .twd {
-  max-width: 50%;
+  width: 50%;
   height: auto;
   display: block;
   margin: auto auto; }
@@ -284,11 +278,9 @@ div.width {
       margin: 20px auto; }
     #contact main.pagewrapper p {
       text-indent: 0; }
-    #contact main.pagewrapper col1,
-    #contact main.pagewrapper col2 {
-      width: 350px; }
     #contact main.pagewrapper section {
       position: absolute;
+      margin-top: 100px;
       left: -25%;
       transform: translateX(-50%);
       z-index: 0; }
@@ -308,8 +300,7 @@ div.width {
       font-size: 25px;
       padding: 10px;
       border-radius: 5px;
-      background: rgba(255, 20, 20, 0.25);
-      margin: 50% 0 0 0; }
+      background: rgba(255, 20, 20, 0.25); }
     #contact main.pagewrapper i.fas {
       color: #ad0030; }
     #contact main.pagewrapper i.fas:hover {
@@ -363,13 +354,8 @@ div.width {
   width: 1%;
   height: 100%;
   background-color: #ad0030;
-  border-radius: 20px 20px;
-  animation: progress .75s ease-in-out; }
-@keyframes progress {
-  from {
-    width: 20%; }
-  to {
-    width: 80%; } }
+  border-radius: 20px 20px; }
+
 #rec {
   overflow-x: hidden; }
   #rec footer {
@@ -409,5 +395,76 @@ div.width {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap; }
+
+@media screen and (max-width: 1100px) {
+  i.fa-angle-double-left,
+  i.fa-angle-double-right {
+    margin: 0 0 0 0; }
+
+  .cardHiddenR {
+    visibility: hidden; }
+
+  .cardVisible i,
+  .cardVisible h2 {
+    visibility: visible;
+    width: 200px; } }
+@media screen and (max-width: 850px) {
+  .w70 {
+    width: 100%;
+    margin: 0 auto; }
+
+  .w50 {
+    width: 100%;
+    margin: 0 auto; }
+
+  .col1,
+  .col2 {
+    width: 100%;
+    margin: 0; }
+
+  .col1 img,
+  .col2 img {
+    padding: 0;
+    margin: 0; }
+
+  #offright,
+  #offleft {
+    margin-right: 0;
+    margin-left: 0;
+    width: 100px;
+    height: 100px;
+    display: block; }
+
+  header {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center; }
+
+  .flexP {
+    flex-direction: column-reverse; }
+
+  .twd {
+    width: 100%; }
+
+  #contact section.cardVisible {
+    margin-top: 0px;
+    visibility: visible;
+    top: initial;
+    left: initial;
+    position: initial; }
+    #contact section.cardVisible h2, #contact section.cardVisible i {
+      text-align: center;
+      visibility: visible;
+      margin-left: 25%; }
+  #contact section {
+    position: static; }
+    #contact section h2 {
+      visibility: hidden; }
+    #contact section i {
+      visibility: hidden; }
+  #contact .tyn {
+    margin-top: 500px;
+    width: 100%; } }
 
 /*# sourceMappingURL=index.css.map */

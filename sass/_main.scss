@@ -36,10 +36,6 @@ header {
     align-content: center;
     box-shadow: 0 0 5px 5px rgba(0,0,0,0.5);
 
-    img {
-        display: inline-block;
-    }
-
     h1 {
         display: inline-block;
         flex: 1 1 auto;
@@ -47,7 +43,6 @@ header {
     }
 
     img#offright {
-        margin-left: 25px;
         max-width: 100px;
         max-height: 100px;
     }
@@ -254,7 +249,7 @@ p {
 
 img {
     max-width: 100%;
-    max-height: 100%;
+    height: auto;
 }
 
 footer {
@@ -266,10 +261,6 @@ footer {
 
 body#intro {
     overflow-x: hidden;
-    img.introimg {
-        height: 700px;
-        padding: 20px;
-    }
     .w50:hover {
         background-color: rgba(0,0,0,.25);
         transition-duration: .5s;
@@ -338,7 +329,7 @@ div.width {
 }
 
 .twd {
-    max-width: 50%;
+    width: 50%;
     height: auto;
     display: block;
     margin: auto auto;
@@ -362,13 +353,9 @@ div.width {
             text-indent: 0;
         }
 
-        col1,
-        col2 {
-            width: 350px;
-        }
-
         section {
             position: absolute;
+            margin-top: 100px;
             left: -25%;
             transform: translateX(-50%);
             z-index: 0;
@@ -399,7 +386,7 @@ div.width {
             padding: 10px;
             border-radius: 5px;
             background: rgba(255,20,20,.25);
-            margin: 50% 0 0 0;
+            // margin: 50% 0 0 0;
         }
 
         i.fas {
@@ -493,14 +480,7 @@ div.width {
         height: 100%;
         background-color: $os-red;
         border-radius: 20px 20px;
-        animation: progress .75s ease-in-out;
     }
-
-    @keyframes progress {
-        from{width: 20%;}
-        to{width: 80%;}
-    }
-
 }
 
 
@@ -571,5 +551,103 @@ div.width {
         display: flex;
         flex-direction: column;
         flex-wrap: nowrap;
+    }
+}
+
+//*******************MEDIA-QUERIES**********************//
+
+@media screen and (max-width: 1100px) {
+    i.fa-angle-double-left,
+    i.fa-angle-double-right {
+        margin: 0 0 0 0;
+    }
+
+    .cardHiddenR {
+        visibility: hidden;
+    }
+
+    .cardVisible i,
+    .cardVisible h2 {
+        visibility: visible;
+        width: 200px;
+    }
+}
+
+@media screen and (max-width: 850px) {
+
+    .w70 {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .w50 {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .col1,
+    .col2 {
+        width: 100%;
+        margin: 0;
+    }
+
+    .col1 img,
+    .col2 img {
+        padding: 0;
+        margin: 0;
+    }
+
+    #offright,
+    #offleft {
+        margin-right: 0;
+        margin-left: 0;
+        width: 100px;
+        height: 100px;
+        display: block;
+    }
+
+    header {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .flexP {
+        flex-direction: column-reverse;
+    }
+
+    .twd {
+        width: 100%;
+    }
+
+    #contact {
+        section.cardVisible {
+            margin-top: 0px;
+            visibility: visible;
+            top: initial;
+            left: initial;
+            position: initial;
+            h2, i {
+                text-align: center;
+                visibility: visible;
+                margin-left: 25%;
+            }
+        }
+
+        section {
+            position: static;
+            h2 {
+                visibility: hidden;
+            }
+            i {
+                visibility: hidden;
+            }
+        }
+
+        .tyn {
+            margin-top: 500px;
+            width: 100%;
+        }
     }
 }
