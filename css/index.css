@@ -138,7 +138,8 @@ h6 {
   font-family: "Enriqueta", serif;
   color: #494949;
   font-weight: 600;
-  text-align: center; }
+  text-align: center;
+  display: block; }
 
 p {
   color: #494949;
@@ -265,6 +266,12 @@ div.width {
   font-weight: 400;
   font-size: 20px; }
 
+.twd {
+  max-width: 50%;
+  height: auto;
+  display: block;
+  margin: auto auto; }
+
 #contact {
   overflow-x: hidden; }
   #contact main.pagewrapper {
@@ -327,12 +334,42 @@ div.width {
       justify-content: space-between;
       z-index: 100000; }
   #contact .tyn {
-    margin-top: 200px; }
+    margin-top: 250px; }
 
 #resume .pagewrapper ul {
-  margin: auto;
-  display: block; }
-
+  width: 100%;
+  margin: 0 auto;
+  list-style-type: none;
+  padding: 10px; }
+#resume .pagewrapper ul ul {
+  margin-left: 33px; }
+#resume .pagewrapper .col1,
+#resume .pagewrapper .col2 {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row; }
+#resume .pagewrapper .col1 div {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap; }
+#resume .pagewrapper .progressBar {
+  position: relative;
+  width: 100%;
+  height: 30px;
+  background-color: #494949;
+  border-radius: 20px 20px; }
+#resume .pagewrapper .myProgress {
+  position: absolute;
+  width: 1%;
+  height: 100%;
+  background-color: #ad0030;
+  border-radius: 20px 20px;
+  animation: progress .75s ease-in-out; }
+@keyframes progress {
+  from {
+    width: 20%; }
+  to {
+    width: 80%; } }
 #rec {
   overflow-x: hidden; }
   #rec footer {
