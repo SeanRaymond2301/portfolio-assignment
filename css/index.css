@@ -37,9 +37,6 @@ header {
   header i#offleft:hover {
     color: #ededed; }
 
-a {
-  color: #494949; }
-
 nav.hidden {
   position: fixed;
   top: -75px;
@@ -360,6 +357,12 @@ div.width {
   flex-wrap: nowrap; }
 
 @media screen and (max-width: 850px) {
+  nav ul li {
+    padding: 20px 0; }
+
+  nav ul li:hover {
+    background-color: rgba(0, 0, 0, 0); }
+
   .w70 {
     width: 100%;
     margin: 0 auto; }
@@ -407,5 +410,9 @@ div.width {
   #contact .tyn {
     margin-top: 600px;
     width: 100%; } }
+@media screen and (max-width: 700px) {
+  nav ul a,
+  nav ul li.dd {
+    width: 25%; } }
 
 /*# sourceMappingURL=index.css.map */

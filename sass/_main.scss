@@ -61,10 +61,6 @@ header {
 
 }
 
-a {
-    color: $bg-grey;
-}
-
 nav.hidden {
     position: fixed;
     top: -75px;
@@ -515,6 +511,13 @@ div.width {
 //*******************MEDIA-QUERIES**********************//
 
 @media screen and (max-width: 850px) {
+    nav ul li {
+        padding: 20px 0;
+    }
+
+    nav ul li:hover {
+        background-color: rgba(0,0,0,0);
+    }
 
     .w70 {
         width: 100%;
@@ -569,7 +572,7 @@ div.width {
         main.pagewrapper i{
             font-size: 100px;
         }
-        
+
         main.pagewrapper .card h2 {
             font-size: 20px;
         }
@@ -578,5 +581,12 @@ div.width {
             margin-top: 600px;
             width: 100%;
         }
+    }
+}
+
+@media screen and (max-width: 700px) {
+    nav ul a,
+    nav ul li.dd {
+        width: 25%;
     }
 }
