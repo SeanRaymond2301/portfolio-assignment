@@ -63,7 +63,6 @@ header {
 
 nav.hidden {
     position: fixed;
-    top: -75px;
     transition-duration: 1.5s;
     background: rgba(0,0,0,.75);
     color: white;
@@ -149,15 +148,15 @@ i.fa-bars {
     position: relative;
     color: white;
     margin-left: 5px;
-    top: 0;
+    top: 75px;
 }
 
 .barDown {
-    top: 0px;
+    top: 0;
 }
 
 .down {
-    top: 75px;
+    top: 0;
 }
 
 .barUp {
@@ -165,11 +164,12 @@ i.fa-bars {
 }
 
 .up {
-    top: 0px;
+    top: -75px;
 }
 
 #navIcon {
     position: fixed;
+    z-index: 10000000;
 }
 
 i.fas:hover {
@@ -647,8 +647,34 @@ div.width {
 }
 
 @media screen and (max-width: 700px) {
-    nav ul a,
-    nav ul li.dd {
-        width: 25%;
+
+    i.fa-bars {
+        top: 200px;
+    }
+
+    .up {
+        top: -200px;
+    }
+
+    .barUp {
+        top: -200px;
+    }
+
+    nav.hidden {
+        height: 200px;
+    }
+
+    nav ul {
+        display: block;
+    }
+
+    nav ul li {
+        text-align: center;
+    }
+
+    .displayNone {
+        text-align: center;
+        width: 100%;
+        margin: 20px auto 0 auto;
     }
 }
