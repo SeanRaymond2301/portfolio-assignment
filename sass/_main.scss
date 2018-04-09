@@ -381,9 +381,6 @@ div.width {
             z-index: 100000;
         }
 
-        .posR {
-            position: relative;
-        }
     }
 
     .tyn {
@@ -511,6 +508,7 @@ div.width {
 //*******************MEDIA-QUERIES**********************//
 
 @media screen and (max-width: 850px) {
+    
     nav ul li {
         padding: 20px 0;
     }
@@ -519,6 +517,10 @@ div.width {
         background-color: rgba(0,0,0,0);
     }
 
+    .cardHiddenR {
+        left: initial;
+        z-index: 0;
+    }
     .w70 {
         width: 100%;
         margin: 0 auto;
@@ -561,11 +563,15 @@ div.width {
     }
 
     .flexP {
-        flex-direction: column;
+        display: block;
     }
 
     .twd {
         width: 100%;
+    }
+
+    .cardcontainer {
+        position: relative;
     }
 
     #contact {
@@ -574,12 +580,52 @@ div.width {
         }
 
         main.pagewrapper .card h2 {
-            font-size: 20px;
+            all: inherit;
+            font-family: $title-font;
+            color: $bg-grey;
+            font-weight: 600;
+            text-align: center;
+            display: block;
         }
 
         .tyn {
             margin-top: 600px;
             width: 100%;
+        }
+        main.pagewrapper .cardcontainer section.card {
+            all: initial;
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+        main.pagewrapper .cardcontainer a i.contactCards {
+            width: 100%;
+        }
+        main.pagewrapper div.arrows {
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width: 1080px) {
+    #contact {
+        main.pagewrapper .cardcontainer section.card {
+            all: initial;
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+        main.pagewrapper .cardcontainer a i.contactCards {
+            width: 100%;
+        }
+        main.pagewrapper div.arrows {
+            display: none;
+        }
+        main.pagewrapper .cardcontainer section.card {
+            all: initial;
+            display: block;
+            width: 100%;
+            height: auto;
         }
     }
 }
