@@ -209,51 +209,11 @@ body#intro {
     background-color: rgba(0, 0, 0, 0.25);
     transition-duration: .5s; }
 
-#intro div.card2 {
-  overflow-x: hidden; }
-
-#intro div div.card {
-  transition-duration: 3s;
-  visibility: hidden;
-  padding: 100px 20px;
-  position: absolute;
-  left: -2560px;
-  color: black;
-  width: 50%;
-  border: 3px solid white; }
-
-.cardShown {
-  display: none;
-  transition-duration: 3s;
-  padding: 100px 20px;
-  position: absolute;
-  left: 50%;
-  color: black;
-  width: 50%;
-  margin-left: -25%;
-  background-color: rgba(255, 255, 255, 0.5);
-  border: 3px solid white; }
-
-.cardHidden {
-  color: black;
-  display: none;
-  transition-duration: 3s;
-  padding: 100px 20px;
-  left: 2560px;
-  width: 50%;
-  position: absolute;
-  border: 3px solid white; }
-
 p.black {
   color: black; }
 
 div.width {
   width: 20%; }
-
-.cardText {
-  display: block;
-  width: 100%;
-  margin: 0; }
 
 .am-intro {
   text-align: center;
@@ -275,12 +235,14 @@ div.width {
       border-left: 3px solid white;
       border-right: 3px solid white;
       width: 120px;
-      margin: 20px auto; }
+      margin: 20px;
+      text-align: center;
+      position: relative;
+      left: 41%; }
     #contact main.pagewrapper p {
       text-indent: 0; }
     #contact main.pagewrapper section {
       position: absolute;
-      margin-top: 100px;
       left: -25%;
       transform: translateX(-50%);
       z-index: 0; }
@@ -308,24 +270,25 @@ div.width {
     #contact main.pagewrapper i.fa-envelope-square {
       background: rgba(0, 0, 0, 0); }
     #contact main.pagewrapper a {
-      text-align: center;
-      width: 350px; }
+      text-align: center; }
     #contact main.pagewrapper div.center {
       text-align: center; }
     #contact main.pagewrapper .grey {
       color: #ababab; }
     #contact main.pagewrapper .cardVisible {
-      left: 20%;
-      z-index: 100; }
+      z-index: 100;
+      left: 15%; }
     #contact main.pagewrapper .cardHiddenR {
-      left: 40%;
+      left: 45%;
       z-index: 0; }
     #contact main.pagewrapper .arrows {
       display: flex;
       justify-content: space-between;
       z-index: 100000; }
+    #contact main.pagewrapper .posR {
+      position: relative; }
   #contact .tyn {
-    margin-top: 250px; }
+    margin-top: 300px; }
 
 #resume .pagewrapper ul {
   width: 100%;
@@ -396,18 +359,6 @@ div.width {
   flex-direction: column;
   flex-wrap: nowrap; }
 
-@media screen and (max-width: 1100px) {
-  i.fa-angle-double-left,
-  i.fa-angle-double-right {
-    margin: 0 0 0 0; }
-
-  .cardHiddenR {
-    visibility: hidden; }
-
-  .cardVisible i,
-  .cardVisible h2 {
-    visibility: visible;
-    width: 200px; } }
 @media screen and (max-width: 850px) {
   .w70 {
     width: 100%;
@@ -440,31 +391,21 @@ div.width {
     flex-wrap: nowrap;
     justify-content: center;
     align-items: center; }
+    header i {
+      font-size: 100px; }
 
   .flexP {
-    flex-direction: column-reverse; }
+    flex-direction: column; }
 
   .twd {
     width: 100%; }
 
-  #contact section.cardVisible {
-    margin-top: 0px;
-    visibility: visible;
-    top: initial;
-    left: initial;
-    position: initial; }
-    #contact section.cardVisible h2, #contact section.cardVisible i {
-      text-align: center;
-      visibility: visible;
-      margin-left: 25%; }
-  #contact section {
-    position: static; }
-    #contact section h2 {
-      visibility: hidden; }
-    #contact section i {
-      visibility: hidden; }
+  #contact main.pagewrapper i {
+    font-size: 100px; }
+  #contact main.pagewrapper .card h2 {
+    font-size: 20px; }
   #contact .tyn {
-    margin-top: 500px;
+    margin-top: 600px;
     width: 100%; } }
 
 /*# sourceMappingURL=index.css.map */
