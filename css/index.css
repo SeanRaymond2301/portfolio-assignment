@@ -117,6 +117,18 @@ i.fa-bars {
   margin-left: 5px;
   top: 0; }
 
+.barDown {
+  top: 0px; }
+
+.down {
+  top: 75px; }
+
+.barUp {
+  top: -75px; }
+
+.up {
+  top: 0px; }
+
 #navIcon {
   position: fixed; }
 

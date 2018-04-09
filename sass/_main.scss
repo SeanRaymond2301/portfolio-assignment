@@ -152,6 +152,22 @@ i.fa-bars {
     top: 0;
 }
 
+.barDown {
+    top: 0px;
+}
+
+.down {
+    top: 75px;
+}
+
+.barUp {
+    top: -75px;
+}
+
+.up {
+    top: 0px;
+}
+
 #navIcon {
     position: fixed;
 }
@@ -508,7 +524,7 @@ div.width {
 //*******************MEDIA-QUERIES**********************//
 
 @media screen and (max-width: 850px) {
-    
+
     nav ul li {
         padding: 20px 0;
     }
