@@ -285,8 +285,6 @@ div.width {
       display: flex;
       justify-content: space-between;
       z-index: 100000; }
-    #contact main.pagewrapper .posR {
-      position: relative; }
   #contact .tyn {
     margin-top: 300px; }
 
@@ -360,6 +358,14 @@ div.width {
   flex-wrap: nowrap; }
 
 @media screen and (max-width: 850px) {
+  .cardVisible {
+    z-index: 100;
+    left: initial; }
+
+  .cardHiddenR {
+    left: initial;
+    z-index: 0; }
+
   .w70 {
     width: 100%;
     margin: 0 auto; }
@@ -395,17 +401,49 @@ div.width {
       font-size: 100px; }
 
   .flexP {
-    flex-direction: column; }
+    display: block; }
 
   .twd {
     width: 100%; }
 
+  .cardcontainer {
+    position: relative; }
+
   #contact main.pagewrapper i {
     font-size: 100px; }
   #contact main.pagewrapper .card h2 {
-    font-size: 20px; }
+    all: inherit;
+    font-family: "Enriqueta", serif;
+    color: #494949;
+    font-weight: 600;
+    text-align: center;
+    display: block; }
   #contact .tyn {
     margin-top: 600px;
-    width: 100%; } }
+    width: 100%; }
+  #contact main.pagewrapper .cardcontainer section.card {
+    all: initial;
+    display: block;
+    width: 100%;
+    height: auto; }
+  #contact main.pagewrapper .cardcontainer a i.contactCards {
+    width: 100%; }
+  #contact main.pagewrapper div.arrows {
+    display: none; } }
+@media screen and (max-width: 1080px) {
+  #contact main.pagewrapper .cardcontainer section.card {
+    all: initial;
+    display: block;
+    width: 100%;
+    height: auto; }
+  #contact main.pagewrapper .cardcontainer a i.contactCards {
+    width: 100%; }
+  #contact main.pagewrapper div.arrows {
+    display: none; }
+  #contact main.pagewrapper .cardcontainer section.card {
+    all: initial;
+    display: block;
+    width: 100%;
+    height: auto; } }
 
 /*# sourceMappingURL=index.css.map */
